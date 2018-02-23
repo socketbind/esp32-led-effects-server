@@ -9,6 +9,7 @@ https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2050601.m570.l1313.TR0.TRC0.H
 These devices can be controlled through a daisy-chained SPI interface.
 
 **What works**
+
 * Simple web interface.
 * Websocket interface. (Uses protobuf for the moment, see proto/ws.proto but might implement JSON or something simple later.)
 * Multiple effects are available (scroll left, inverse, blinking frame).
@@ -18,12 +19,14 @@ These devices can be controlled through a daisy-chained SPI interface.
 * (*not tested*) SPI interface works with transfers happening but I was not able to test with an actual module as the package got lost in transit...
 
 **Libraries used**
+
 ESP32-IDF - https://github.com/espressif/esp-idf.git
 Mongoose HTTP Server - https://github.com/cesanta/mongoose
 NanoPB - https://github.com/nanopb/nanopb
 Monochrome bitmap fonts - https://github.com/dhepper/font8x8
 
 **Wiring**
+
 Please be very cautious. I do not take any responsibility for ruined hardware. I was not able to test with an actual LED matrix yet so please double-check yourself if these pairings make any sense to you.
 
 The SPI interface is initialized in the code with the following default values used:
@@ -44,6 +47,7 @@ IO15 (CS)     | CS
 IO14 (CLK)    | CLK
 
 **Building**
+
 Set up ESP-IDF as outlined here: https://esp-idf.readthedocs.io/en/latest/get-started/index.html#introduction
 
 Then build and flash the actual binaries:
@@ -68,6 +72,7 @@ The HTTP interface itself is rather simple and listens on port 80.
 The bitmap font is actually generated from the font8x8 header files.
 
 **License**
+
 The MIT License (MIT)
 
 Copyright (c) 2018 Gabriel Miklos
