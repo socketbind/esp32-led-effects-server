@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Uglyka';
+    src: url('font.woff2') format('woff2'),
+        url('font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background: #607d8b;
+  font-family: sans-serif;
+  color: #e0f7fa;
+  font-size: 1.5em;
+}
+
+input.dotDisplayText {
+  font-family: 'Uglyka';
+  font-size: 4.5em;
+  color: #ff3d00;
+  background: none;
+  border: 1px solid #ff3d00;
+  border-radius: 2px;
+  border: 1px solid #8eacbb;
+  display: block;
+  margin-bottom: 0.2em;
+  width: 100%;
+}
+
+input.setText {
+  font-size: 1em;
+  font-weight: bold;
+  height: 2.5em;
+  background: #34515e;
+  color: #8eacbb;
+  border: 1px solid #8eacbb;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+}
+
+#effectForm {
+  margin-top: 1em;
+}
+
+#effectForm .effectChoice {
+  margin-bottom: 0.5em;
+}
+
+#effectForm input[type="radio"] {
+  border: 0px;
+  width: 1.5em;
+  height: 1.5em;
+}

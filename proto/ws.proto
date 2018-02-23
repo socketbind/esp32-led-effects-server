@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message SetDisplay {
+  uint32 n_horiz = 1;
+  bytes dots = 2;
+}
+
+message DotCommand {
+  oneof command {
+    SetDisplay set_display = 1;
+  }
+}

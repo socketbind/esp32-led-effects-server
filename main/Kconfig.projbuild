@@ -1,0 +1,25 @@
+menu "Wifi Client Configuration"
+
+config WIFI_SSID
+    string "WiFi SSID"
+    default "myssid"
+    help
+        SSID (network name) for the example to connect to.
+
+config WIFI_PASSWORD
+    string "WiFi Password"
+    default "mypassword"
+    help
+        WiFi password (WPA or WPA2) for the example to use.
+
+endmenu
+
+menu "LED Server Configuration"
+
+config MIRROR_EFFECTS_UART
+    bool "Mirror currently displayed effects on the UART console."
+    default y
+    help
+        Mirrors the effects as asterisks in realtime on the console.
+
+endmenu

@@ -1,0 +1,5 @@
+/build/
+/junk/
+sdkconfig
+sdkconfig.old
+.clang_complete

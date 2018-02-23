@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>DOT Display</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form action="/" method="POST" autocomplete="off" id="textForm">
+    <input type="text" name="text" class="dotDisplayText">
+    <input type="submit" value="Set" class="setText">
+  </form>
+
+  <form action="/" method="POST" id="effectForm">
+    <div class="effectChoice">
+      <input type="radio" name="effect" id="effect_0" value="0">
+      <label for="effect_0">Scroll Left</label>
+    </div>
+
+    <div class="effectChoice">
+      <input type="radio" name="effect" id="effect_1" value="1">
+      <label for="effect_1">Inverse Blink</label>
+    </div>
+
+    <div class="effectChoice">
+      <input type="radio" name="effect" id="effect_2" value="2">
+      <label for="effect_2">Blinky Frame</label>
+    </div>
+  </form>
+
+  <script type="application/javascript">
+    var effectForm = document.getElementById('effectForm');
+    var choices = document.querySelectorAll('.effectChoice input[type="radio"]');
+
+    for (var i = 0; i < choices.length; i++) {
+      choices[i].addEventListener('click', function() {
+        effectForm.submit();
+      });
+    }
+  </script>
+</body>
+</html>
