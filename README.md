@@ -20,10 +20,10 @@ These devices can be controlled through a daisy-chained SPI interface.
 
 **Libraries used**
 
-ESP32-IDF - https://github.com/espressif/esp-idf.git
-Mongoose HTTP Server - https://github.com/cesanta/mongoose
-NanoPB - https://github.com/nanopb/nanopb
-Monochrome bitmap fonts - https://github.com/dhepper/font8x8
+* ESP32-IDF - https://github.com/espressif/esp-idf.git
+* Mongoose HTTP Server - https://github.com/cesanta/mongoose
+* NanoPB - https://github.com/nanopb/nanopb
+* Monochrome bitmap fonts - https://github.com/dhepper/font8x8
 
 **Wiring**
 
