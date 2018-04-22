@@ -40,7 +40,7 @@ void dot_display_init(dot_display_t *display, int n_devices, spi_t *spi_device) 
 		dot_display_spi_transfer(display, i, OP_DECODEMODE, 0);
     dot_display_spi_transfer(display, i, OP_INTENSITY, 15);
 		dot_display_clear(display, i);
-		dot_display_shutdown(display, i, true);
+		dot_display_shutdown(display, i, false);
 	}
 }
 

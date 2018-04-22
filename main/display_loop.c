@@ -32,6 +32,8 @@ static void display_loop_setup_effect(display_loop_t *loop, effect_fns_t const *
 
 void display_loop_init(display_loop_t *loop, int n_devices) {
   loop->current_effect = NULL;
+  loop->current_effect_data = (void**) malloc(sizeof(void*));
+
   loop->mux = xSemaphoreCreateMutex();
 
   loop->n_devices = n_devices;
@@ -51,7 +53,7 @@ void display_loop_init(display_loop_t *loop, int n_devices) {
 
 void display_loop_destroy(display_loop_t *loop) {
   if (loop->current_effect) {
-    loop->current_effect->destroy_fn(loop->current_effect_data);
+    loop->current_effect->destroy_fn(*(loop->current_effect_data));
   }
 
   spi_destroy(loop->spi_device);
@@ -60,6 +62,7 @@ void display_loop_destroy(display_loop_t *loop) {
   free(loop->spi_device);
   free(loop->dot_display);
   free(loop->buffer);
+  free(loop->current_effect_data);
 
   vSemaphoreDelete(loop->mux);
 }
