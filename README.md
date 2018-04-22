@@ -16,7 +16,7 @@ These devices can be controlled through a daisy-chained SPI interface.
 * Effects are mirrored as asterisks on the UART console.
 * Connects to a WiFi network.
 * Advertises itself using mDNS.
-* (*not tested*) SPI interface works with transfers happening but I was not able to test with an actual module as the package got lost in transit...
+* SPI communication.
 
 **Libraries used**
 
