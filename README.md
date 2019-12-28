@@ -1,5 +1,7 @@
 # ESP32 LED Effects Server
 
+**Not maintained but you are very much welcome to fork it and make improvements!**
+
 This software provides a simple web-based interface for driving 8x8 MAX7219-based LED Matrices on an ESP32 microcontroller. I'm using the Geekworm ESP32-DevKit (http://www.raspberrypiwiki.com/index.php/ESP32-DevKit).
 
 Cheap modules can be found on various online marketplaces like eBay, DealExtreme or Aliexpress:
